@@ -1,5 +1,17 @@
-h1 {
-  color: red;
-  font-size: 100px;
-  text-align: center;
+/* Color palette */
+:root {
+  --color-primary: #05a845;
+  --color-secondary: #00d9ff;
+  --color-accent: #ff3400;
+  --color-headings: #1b0760;
+  --color-body: #918ca4;
+  --color-body-darker: #5c5577;
+  --color-border: #ccc;
+  --border-radius: 30px;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
