@@ -17,6 +17,58 @@
     <link rel="stylesheet" href="css/normalize.css" />
   </head>
   <body>
-    <h1>Heading 1</h1>
+    <header class="block container header">
+      <div class="navbar">
+        <div class="logo">
+          <img src="./assets/logo.svg" alt="Logo" />
+        </div>
+        <div class="search-container">
+          <input type="text" placeholder="Search for product..." />
+          <button class="search-button">
+            <img src="./assets/search-2.svg" alt="Search" />
+          </button>
+        </div>
+        <div class="icons">
+          <div class="icon-container wishlist">
+            <img src="./assets/user.svg" alt="User" class="icon" />
+          </div>
+          <div class="icon-container wishlist">
+            <img src="./assets/wishlist.svg" alt="Wishlist" class="icon" />
+            <span class="icon-badge">1</span>
+          </div>
+          <div class="icon-container cart">
+            <img src="./assets/cart.svg" alt="Cart" class="icon" />
+            <span class="icon-badge">1</span>
+          </div>
+        </div>
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+
+      <div class="menu" id="menu">
+        <a href="#" class="menu-item categories">
+          <img
+            src="./assets/menu.svg"
+            alt="Menu"
+            style="width: 12px; margin: 0 10px"
+          />
+          All Categories
+        </a>
+        <a href="#" class="menu-item">Offers</a>
+        <a href="#" class="menu-item">Today’s Deals</a>
+        <a href="#" class="menu-item">Order Tracking</a>
+        <div class="help-contact">
+          Need help?
+          <a href="mailto:contact@example.com" class="contact-text"
+            >contact@example.com</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <script src="js/main.js"></script>
   </body>
 </html>
