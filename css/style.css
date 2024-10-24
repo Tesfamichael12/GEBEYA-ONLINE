@@ -1,7 +1,7 @@
 /* Color palette */
 :root {
   --color-primary: #05a845;
-  --color-secondary: #00d9ff;
+  --color-secondary: #4bd820;
   --color-accent: #ff3400;
   --color-headings: #1b0760;
   --color-body: #918ca4;
@@ -145,6 +145,8 @@ p {
   overflow: hidden;
   width: 100%;
   max-width: 400px;
+  box-shadow: 0 0 3px 2px rgba(161, 160, 160, 0.2);
+  border-radius: 0.5rem;
 }
 
 .search-container input {
@@ -160,6 +162,11 @@ p {
   border: none;
   padding: 6px;
   cursor: pointer;
+  transition: color;
+}
+
+.search-container button:hover {
+  background-color: #45a049;
 }
 
 .search-container button img {
@@ -209,7 +216,9 @@ p {
   display: flex;
   align-items: center;
   list-style: none;
-  margin-top: 1rem;
+  margin: 1rem 0;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .menu-item {
@@ -257,7 +266,7 @@ p {
 
 .hamburger div {
   width: 20px;
-  height: 2px;
+  height: 0.22rem;
   background-color: #333333;
   margin: 2.5px 0;
   margin-left: 15px;
@@ -276,15 +285,15 @@ p {
   .menu {
     display: flex;
     flex-direction: column;
-    overflow: hidden; /* Ensures content doesn't overflow */
-    max-height: 0; /* Initially collapsed */
-    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Smooth transition */
-    opacity: 0; /* Initially hidden */
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 0;
   }
 
   .menu--expanded {
-    max-height: 100vh; /* Large enough to hold content */
-    opacity: 1; /* Fully visible */
+    max-height: 100vh;
+    opacity: 1;
   }
 
   .menu-item,
@@ -312,6 +321,152 @@ p {
 }
 
 .contact-text {
-  color: #4bd820;
+  color: var(--color-secondary);
   font-size: 14px;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url("../assets/image-33.svg");
+  background-size: cover;
+  background-position: center;
+  max-height: 100vh;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #fff;
+}
+
+.hero__content {
+  width: 100%;
+  padding: 4rem 2rem;
+  display: flex;
+  position: relative;
+  z-index: 2;
+  text-align: left;
+}
+
+.hero__title {
+  font-size: 5rem;
+  margin-bottom: 5rem;
+  line-height: 1.2;
+  font-weight: bold;
+  background-image: linear-gradient(to right, #ff9800, #ff5722, #ffeb3b);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -o-background-clip: text;
+  -ms-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  text-shadow: 0.2rem 0.2rem 0.5rem #ffa6003b;
+  text-align: left;
+}
+
+.hero__search-container {
+  display: flex;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.hero__search-input {
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  width: 50rem;
+  outline: none;
+  box-shadow: 0 0 3px 2px rgba(161, 160, 160, 0.2);
+}
+
+.hero__search-button {
+  padding: 1.5rem 2rem;
+  font-size: 1.6rem;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
+
+  transition: background-color 0.3s;
+}
+
+.hero__search-button:hover {
+  background-color: #45a049;
+}
+
+.hero__features {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.hero__feature {
+  width: 20rem;
+  display: flex;
+  font-size: 1.3rem;
+  color: #9c9c9c;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.hero__feature:hover {
+  background-color: rgba(186, 183, 183, 0.155);
+  color: var(--color-secondary);
+}
+
+.hero__feature-icon {
+  margin-right: 0.5rem;
+  color: var(--color-secondary);
+}
+
+.hero__feature-text {
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 85vh;
+  }
+
+  .hero__feature {
+    width: 20rem;
+  }
+
+  .hero__content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero__text-content {
+    max-width: 100%;
+  }
+  .hero__title {
+    font-size: 4.8rem; /* Adjusted for smaller screens */
+    text-align: center;
+  }
+  .hero__search-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero__search-input {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 0.4rem;
+  }
+  .hero__search-button {
+    width: 100%;
+    border-radius: 0.4rem;
+  }
+  .hero__features {
+    flex-direction: column;
+    align-items: center;
+  }
 }
