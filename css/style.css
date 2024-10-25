@@ -122,14 +122,36 @@ p {
   padding: 0;
 }
 
-.navbar {
+.navbar,
+.navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 12px 40px;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.8); /* Transparent initially */
   border-bottom: 1px solid #e2e2e4;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+  backdrop-filter: blur(0); /* No blur initially */
+}
+
+.navbar-container.scrolled {
+  padding: 0;
+  border-radius: 0 0 2rem 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px); /* Glassmorphism blur effect */
+}
+
+/* Add a class when scrolling */
+.navbar.scrolled {
+  background-color: transparent;
 }
 
 .logo img {
@@ -151,7 +173,8 @@ p {
 
 .search-container input {
   border: none;
-  padding: 0.4rem;
+  padding: 0.8rem;
+  background: transparent;
   width: 100%;
   outline: none;
   font-size: 16px;
@@ -212,13 +235,21 @@ p {
   font-size: 12px;
 }
 
+.menu-container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+}
+
 .menu {
   display: flex;
   align-items: center;
   list-style: none;
-  margin: 1rem 0;
+  margin: 1rem;
   margin-left: 2rem;
   margin-right: 2rem;
+  padding-top: 6.5rem;
 }
 
 .menu-item {
@@ -239,8 +270,8 @@ p {
   align-items: center;
   background-color: #05a845;
   color: #fff;
-  padding: 8px 8px 8px 0;
-  border-radius: 2px;
+  padding: 1.2rem;
+  border-radius: 2rem;
   margin-right: 20px;
   text-decoration: none;
   position: relative;
@@ -262,6 +293,7 @@ p {
   flex-direction: column;
   cursor: pointer;
   margin-left: auto;
+  fill: black;
 }
 
 .hamburger div {
@@ -276,14 +308,21 @@ p {
 @media (max-width: 768px) {
   .navbar {
     padding: 12px 20px;
+    border-bottom: 0;
   }
 
   .search-container {
     max-width: 300px;
   }
 
+  .menu-container {
+    margin: 0 auto;
+  }
+
   .menu {
     display: flex;
+    width: 50%;
+    margin: 0 auto;
     flex-direction: column;
     overflow: hidden;
     max-height: 0;
@@ -331,12 +370,13 @@ p {
   background-size: cover;
   background-position: center;
   max-height: 100vh;
-  height: 50vh;
+  height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   color: #fff;
+  margin-top: 13.5rem;
 }
 
 .hero__content {
@@ -373,7 +413,7 @@ p {
 }
 
 .hero__search-input {
-  padding: 1.5rem;
+  padding: 1.8rem;
   font-size: 1.6rem;
   border: 1px solid #ddd;
   border-radius: 1rem;
@@ -435,6 +475,7 @@ p {
 @media (max-width: 768px) {
   .hero {
     height: 85vh;
+    margin-top: 6.5rem;
   }
 
   .hero__feature {
@@ -478,7 +519,7 @@ p {
   justify-content: center;
   gap: 40px;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 10rem auto;
   padding: 20px;
   position: relative;
 }
@@ -519,6 +560,14 @@ p {
   padding-bottom: 10rem;
 }
 
+.delivery-step-heading {
+  font-size: 2rem;
+}
+
+.delivery-step-description {
+  font-size: 1.5rem;
+}
+
 /* Large screens (1200px and up) */
 @media (min-width: 1200px) {
   .delivery-step-icon {
@@ -532,11 +581,11 @@ p {
   }
 
   .delivery-step-heading {
-    font-size: 1.4rem;
+    font-size: 2rem;
   }
 
   .delivery-step-description {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -596,5 +645,13 @@ p {
   .delivery-step-image {
     width: 85px;
     height: 85px;
+  }
+
+  .delivery-step-heading {
+    font-size: 2.5rem;
+  }
+
+  .delivery-step-description {
+    font-size: 1.5rem;
   }
 }

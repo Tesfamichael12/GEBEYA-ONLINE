@@ -19,53 +19,57 @@
   <body>
     <header class="block container header">
       <!-- Navbar -->
-      <div class="navbar">
-        <div class="logo">
-          <img src="./assets/logo.svg" alt="Logo" />
-        </div>
-        <div class="search-container">
-          <input type="text" placeholder="Search for product..." />
-          <button class="search-button">
-            <img src="./assets/search-2.svg" alt="Search" />
-          </button>
-        </div>
-        <div class="icons">
-          <div class="icon-container wishlist">
-            <img src="./assets/user.svg" alt="User" class="icon" />
+      <div class="navbar-container scrolled">
+        <div class="navbar scrolled container">
+          <div class="logo">
+            <img src="./assets/logo.svg" alt="Logo" />
           </div>
-          <div class="icon-container wishlist">
-            <img src="./assets/wishlist.svg" alt="Wishlist" class="icon" />
-            <span class="icon-badge">1</span>
+          <div class="search-container">
+            <input type="text" placeholder="Search for product..." />
+            <button class="search-button">
+              <img src="./assets/search-2.svg" alt="Search" />
+            </button>
           </div>
-          <div class="icon-container cart">
-            <img src="./assets/cart.svg" alt="Cart" class="icon" />
-            <span class="icon-badge">1</span>
+          <div class="icons">
+            <div class="icon-container wishlist">
+              <img src="./assets/user.svg" alt="User" class="icon" />
+            </div>
+            <div class="icon-container wishlist">
+              <img src="./assets/wishlist.svg" alt="Wishlist" class="icon" />
+              <span class="icon-badge">1</span>
+            </div>
+            <div class="icon-container cart">
+              <img src="./assets/cart.svg" alt="Cart" class="icon" />
+              <span class="icon-badge">1</span>
+            </div>
+          </div>
+          <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
         </div>
-        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-      </div>
 
-      <div class="menu" id="menu">
-        <a href="#" class="menu-item categories">
-          <img
-            src="./assets/menu.svg"
-            alt="Menu"
-            style="width: 12px; margin: 0 10px"
-          />
-          All Categories
-        </a>
-        <a href="#" class="menu-item">Offers</a>
-        <a href="#" class="menu-item">Today’s Deals</a>
-        <a href="#" class="menu-item">Order Tracking</a>
-        <div class="help-contact">
-          Need help?
-          <a href="mailto:contact@example.com" class="contact-text"
-            >contact@example.com</a
-          >
+        <div class="menu-container container">
+          <div class="menu" id="menu">
+            <a href="#" class="menu-item categories">
+              <img
+                src="./assets/menu.svg"
+                alt="Menu"
+                style="width: 12px; margin: 0 10px"
+              />
+              All Categories
+            </a>
+            <a href="#" class="menu-item">Offers</a>
+            <a href="#" class="menu-item">Today’s Deals</a>
+            <a href="#" class="menu-item">Order Tracking</a>
+            <div class="help-contact">
+              Need help?
+              <a href="mailto:contact@example.com" class="contact-text"
+                >contact@example.com</a
+              >
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -143,6 +147,59 @@
         </div>
       </div>
     </div>
+
+    <!-- Delivery steps section -->
+    <section class="block container block--delivery-process">
+      <div class="delivery-step">
+        <div class="delivery-step-icon">
+          <img
+            src="assets/pic1.png"
+            alt="Quality Resources"
+            class="delivery-step-image"
+          />
+        </div>
+        <h3 class="delivery-step-heading">Quality resources</h3>
+        <p class="delivery-step-description">
+          Lorem ipsum dolor sit amet consectetur.
+        </p>
+      </div>
+
+      <div class="connector connector--down">
+        <img src="assets/first_arrow.png" alt="Arrow" class="arrow-1" />
+      </div>
+
+      <div class="delivery-step">
+        <div class="delivery-step-icon">
+          <img
+            src="assets/pic2.png"
+            alt="Fast Delivery"
+            class="delivery-step-image"
+          />
+        </div>
+        <h3 class="delivery-step-heading">Delivery from 2-4 hour</h3>
+        <p class="delivery-step-description">
+          Lorem ipsum dolor sit amet consectetur.
+        </p>
+      </div>
+
+      <div class="connector connector--up">
+        <img src="assets/second_arrow.png" alt="Arrow" class="arrow-2" />
+      </div>
+
+      <div class="delivery-step">
+        <div class="delivery-step-icon">
+          <img
+            src="assets/pic3.png"
+            alt="Payment"
+            class="delivery-step-image"
+          />
+        </div>
+        <h3 class="delivery-step-heading">Pay after receiving products</h3>
+        <p class="delivery-step-description">
+          Lorem ipsum dolor sit amet consectetur.
+        </p>
+      </div>
+    </section>
 
     <script src="js/main.js"></script>
   </body>
