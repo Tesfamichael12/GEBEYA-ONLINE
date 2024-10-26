@@ -812,3 +812,201 @@ p {
     line-height: 1.5;
   }
 }
+
+/* Popular categories */
+.popular-categories {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.popular-categories__title {
+  text-align: center;
+  color: var(--color-headings);
+  margin-bottom: 30px;
+}
+
+.popular-categories__item-count,
+.popular-categories__item-title {
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.popular-categories__grid {
+  display: grid;
+  grid-template-columns: 270px 1fr 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.popular-categories__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  padding: 20px;
+
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Different background colors for each card */
+.popular-categories__item:nth-child(2) {
+  background-color: #ffe5e5;
+}
+
+.popular-categories__item:nth-child(3) {
+  background-color: #e5f6ff;
+}
+
+.popular-categories__item:nth-child(4) {
+  background-color: #fff5e5;
+}
+
+.popular-categories__item:nth-child(5) {
+  background-color: #f5e5ff;
+}
+
+.popular-categories__item:nth-child(6) {
+  background-color: #e5ffe5;
+}
+
+.popular-categories__item:nth-child(7) {
+  background-color: #ffe5f5;
+}
+
+.popular-categories__item--featured {
+  grid-row: span 2;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #fbf3ee;
+  padding-top: 30px;
+  position: relative;
+}
+
+.popular-categories__item--featured .popular-categories__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  border-radius: 0;
+  margin: 0;
+}
+
+.popular-categories__item--featured .popular-categories__item-title {
+  position: absolute;
+  bottom: 40px;
+  left: 20px;
+  color: var(--color-headings);
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  z-index: 2;
+}
+
+.popular-categories__image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+
+.popular-categories__item:hover .popular-categories__image {
+  transform: scale(1.15);
+}
+
+.popular-categories__item:hover {
+  transform: translateY(-5px);
+}
+
+.popular-categories__image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.popular-categories__item-title {
+  font-size: 1em;
+  color: var(--color-headings);
+  margin-bottom: 5px;
+}
+
+.popular-categories__item-count {
+  color: #666;
+  font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+  .popular-categories__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .popular-categories__item--featured {
+    grid-column: span 2;
+    grid-row: span 1;
+    min-height: 300px;
+    display: block;
+  }
+
+  .popular-categories__item--featured .popular-categories__item-title {
+    font-size: 20px;
+    bottom: 35px;
+  }
+
+  .popular-categories__item--featured .popular-categories__item-count {
+    font-size: 12px;
+    bottom: 15px;
+  }
+
+  .popular-categories__item {
+    padding: 15px;
+  }
+
+  .popular-categories__image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .popular-categories__item-title {
+    font-size: 1em;
+  }
+
+  .popular-categories__item-count {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 480px) {
+  .popular-categories {
+    padding: 10px;
+  }
+
+  .popular-categories__grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .popular-categories__item--featured {
+    grid-column: span 1;
+    min-height: 250px;
+  }
+}
