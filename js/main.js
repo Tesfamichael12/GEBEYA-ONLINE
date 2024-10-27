@@ -11,6 +11,24 @@ function toggleMenu() {
   menu.classList.toggle("menu--expanded"); // Toggle the expanded class
 }
 
+// Common Questions collapeisble code
+document.querySelectorAll(".faq-question").forEach((question) => {
+  question.addEventListener("click", () => {
+    const answer = question.nextElementSibling;
+    const isOpen = answer.classList.contains("active");
+
+    document.querySelectorAll(".faq-answer").forEach((item) => {
+      item.classList.remove("active");
+      item.previousElementSibling.classList.remove("active");
+    });
+
+    if (!isOpen) {
+      answer.classList.add("active");
+      question.classList.add("active");
+    }
+  });
+});
+
 // Initialize counts for wishlist and cart
 let wishlistCount = 1;
 let cartCount = 1;
