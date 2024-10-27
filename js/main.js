@@ -29,6 +29,27 @@ document.querySelectorAll(".faq-question").forEach((question) => {
   });
 });
 
+// collapsible logic for the footer sections
+document.addEventListener("DOMContentLoaded", function () {
+  const footerSections = document.querySelectorAll(".footer-section h3");
+
+  footerSections.forEach((section) => {
+    section.addEventListener("click", function () {
+      this.classList.toggle("collapsible--expanded");
+      const content = this.nextElementSibling;
+      content.classList.toggle("active");
+
+      // Toggle dropdown arrow rotation
+      const dropdown = this.querySelector(".dropdown");
+      if (content.classList.contains("active")) {
+        dropdown.style.transform = "rotate(90deg)"; // Rotate down arrow when expanded
+      } else {
+        dropdown.style.transform = "rotate(0deg)"; // Reset rotation when collapsed
+      }
+    });
+  });
+});
+
 // Initialize counts for wishlist and cart
 let wishlistCount = 1;
 let cartCount = 1;
