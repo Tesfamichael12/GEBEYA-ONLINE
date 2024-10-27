@@ -173,7 +173,7 @@ p {
 
 .search-container input {
   border: none;
-  padding: 0.8rem;
+  padding-left: 0.8rem;
   background: transparent;
   width: 100%;
   outline: none;
@@ -183,7 +183,8 @@ p {
 .search-container button {
   background-color: #05a845;
   border: none;
-  padding: 6px;
+  padding: 0.8rem;
+  height: 100%;
   cursor: pointer;
   transition: color;
 }
@@ -815,9 +816,8 @@ p {
 
 /* Popular categories */
 .popular-categories {
-  max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  /* padding: 3rem; */
 }
 
 .popular-categories__title {
@@ -889,7 +889,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   background-color: #fbf3ee;
   padding-top: 30px;
   position: relative;
@@ -992,6 +992,11 @@ p {
 
   .popular-categories__item-count {
     font-size: 0.8em;
+  }
+
+  .popular-categories__item-count.featured {
+    display: block;
+    font-size: 0.9em;
   }
 }
 
