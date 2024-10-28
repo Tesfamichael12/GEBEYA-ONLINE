@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farm to shelf</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+  </head>
+  <body>
+    <header class="block container header">
+      <!-- Navbar -->
+      <div class="navbar-container scrolled">
+        <div class="navbar scrolled container">
+          <div class="logo">
+            <img src="./assets/logo.svg" alt="Logo" />
+          </div>
+          <div class="search-container">
+            <input type="text" placeholder="Search for product..." />
+            <button class="search-button">
+              <img src="./assets/search-2.svg" alt="Search" />
+            </button>
+          </div>
+          <div class="icons">
+            <div class="icon-container wishlist">
+              <img src="./assets/user.svg" alt="User" class="icon" />
+            </div>
+            <div class="icon-container wishlist">
+              <img src="./assets/wishlist.svg" alt="Wishlist" class="icon" />
+              <span class="icon-badge">1</span>
+            </div>
+            <div class="icon-container cart">
+              <img src="./assets/cart.svg" alt="Cart" class="icon" />
+              <span class="icon-badge">1</span>
+            </div>
+          </div>
+          <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+
+        <div class="menu-container container">
+          <div class="menu" id="menu">
+            <a href="#" class="menu-item categories">
+              <img
+                src="./assets/menu.svg"
+                alt="Menu"
+                style="width: 12px; margin: 0 10px"
+              />
+              All Categories
+            </a>
+            <a href="#" class="menu-item">Offers</a>
+            <a href="#" class="menu-item">Today’s Deals</a>
+            <a href="#" class="menu-item">Order Tracking</a>
+            <div class="help-contact">
+              Need help?
+              <a href="mailto:contact@example.com" class="contact-text"
+                >contact@example.com</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="block container hero__content">
+        <div class="hero__text-content">
+          <h1 class="hero__title">We Deliver to your Doorstep</h1>
+          <div class="hero__search-container">
+            <input
+              type="text"
+              class="hero__search-input"
+              placeholder="Search for products..."
+            />
+            <button class="hero__search-button" aria-label="Search">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </button>
+          </div>
+          <div class="hero__features">
+            <div class="hero__feature">
+              <i class="hero__feature-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="1" y="3" width="15" height="13"></rect>
+                  <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                  <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                  <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                </svg>
+              </i>
+              Delivery from 2-4 hours
+            </div>
+            <div class="hero__feature">
+              <i class="hero__feature-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </i>
+              Quality assurance
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Delivery steps section -->
+    <section class="block container block--delivery-process">
+      <div class="delivery-step">
+        <div class="delivery-step-icon">
+          <img
+            src="assets/pic1.png"
+            alt="Quality Resources"
+            class="delivery-step-image"
+          />
+        </div>
+        <h3 class="delivery-step-heading">Quality resources</h3>
+        <p class="delivery-step-description">
+          Lorem ipsum dolor sit amet consectetur.
+        </p>
+      </div>
+
+      <div class="connector connector--down">
+        <img src="assets/first_arrow.png" alt="Arrow" class="arrow-1" />
+      </div>
+
+      <div class="delivery-step">
+        <div class="delivery-step-icon">
+          <img
+            src="assets/pic2.png"
+            alt="Fast Delivery"
+            class="delivery-step-image"
+          />
+        </div>
+        <h3 class="delivery-step-heading">Delivery from 2-4 hour</h3>
+        <p class="delivery-step-description">
+          Lorem ipsum dolor sit amet consectetur.
+        </p>
+      </div>
+
+      <div class="connector connector--up">
+        <img src="assets/second_arrow.png" alt="Arrow" class="arrow-2" />
+      </div>
+
+      <div class="delivery-step">
+        <div class="delivery-step-icon">
+          <img
+            src="assets/pic3.png"
+            alt="Payment"
+            class="delivery-step-image"
+          />
+        </div>
+        <h3 class="delivery-step-heading">Pay after receiving products</h3>
+        <p class="delivery-step-description">
+          Lorem ipsum dolor sit amet consectetur.
+        </p>
+      </div>
+    </section>
+
+    <!-- Popular offers Slider  -->
+    <section class="block container block-popular-offers">
+      <div class="block__header">
+        <h2 class="block__heading">Popular Offers</h2>
+      </div>
+      <div
+        class="slider"
+        reverse="true"
+        style="--width: 300px; --height: 300px; --quantity: 12"
+      >
+        <div class="list">
+          <div class="item" style="--position: 1">
+            <img src="assets/auto-slider-images/offers/offer_1.jpg" alt="" />
+          </div>
+          <div class="item" style="--position: 2">
+            <img src="assets/auto-slider-images/offers/offer_2.webp" alt="" />
+          </div>
+          <div class="item" style="--position: 3">
+            <img src="assets/auto-slider-images/offers/offer_3.jpg" alt="" />
+          </div>
+          <div class="item" style="--position: 4">
+            <img src="assets/auto-slider-images/offers/offer_4.jpg" alt="" />
+          </div>
+          <div class="item" style="--position: 5">
+            <img src="assets/auto-slider-images/offers/offer_5.jpg" alt="" />
+          </div>
+          <div class="item" style="--position: 6">
+            <img src="assets/auto-slider-images/offers/offer_6.jpg" alt="" />
+          </div>
+          <div class="item" style="--position: 7">
+            <img src="assets/auto-slider-images/offers/offer_7.webp" alt="" />
+          </div>
+          <div class="item" style="--position: 8">
+            <img src="assets/auto-slider-images/offers/offer_8.webp" alt="" />
+          </div>
+          <div class="item" style="--position: 9">
+            <img src="assets/auto-slider-images/offers/offer_9.jpg" alt="" />
+          </div>
+          <div class="item" style="--position: 10">
+            <img src="assets/auto-slider-images/offers/offer_10.jpg" alt="" />
+          </div>
+          <div class="item" style="--position: 11">
+            <img src="assets/auto-slider-images/offers/offer_11.avif" alt="" />
+          </div>
+          <div class="item" style="--position: 12">
+            <img src="assets/auto-slider-images/offers/offer_12.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular Catagories -->
+    <section class="block container popular-categories">
+      <h2 class="popular-categories__title">Popular Categories</h2>
+      <div class="popular-categories__grid">
+        <div
+          class="popular-categories__item popular-categories__item--featured"
+        >
+          <img
+            src="../assets/pngwing-2.webp"
+            alt="Fruits & Vegetables"
+            class="popular-categories__image"
+          />
+          <h2 class="popular-categories__item-title">
+            Fruits & Vegetables
+            <span class="popular-categories__item-count featured"
+              >75 Items</span
+            >
+          </h2>
+        </div>
+
+        <div class="popular-categories__item">
+          <img
+            src="../assets/group-8.svg"
+            alt="Meat & Fish"
+            class="popular-categories__image"
+          />
+          <h2 class="popular-categories__item-title">Meat & Fish</h2>
+          <p class="popular-categories__item-count">50 Items</p>
+        </div>
+
+        <div class="popular-categories__item">
+          <img
+            src="../assets/group-8-2.svg"
+            alt="Cooking"
+            class="popular-categories__image"
+          />
+          <h2 class="popular-categories__item-title">Cooking</h2>
+          <p class="popular-categories__item-count">242 Items</p>
+        </div>
+
+        <div class="popular-categories__item">
+          <img
+            src="../assets/group-8-3.svg"
+            alt="Beverages"
+            class="popular-categories__image"
+          />
+          <h2 class="popular-categories__item-title">Beverages</h2>
+          <p class="popular-categories__item-count">35 Items</p>
+        </div>
+
+        <div class="popular-categories__item">
+          <img
+            src="../assets/group-8-4.svg"
+            alt="Home & Cleaning"
+            class="popular-categories__image"
+          />
+          <h2 class="popular-categories__item-title">Home & Cleaning</h2>
+          <p class="popular-categories__item-count">80 Items</p>
+        </div>
+
+        <div class="popular-categories__item">
+          <img
+            src="../assets/group-8-5.svg"
+            alt="Pest Control"
+            class="popular-categories__image"
+          />
+          <h2 class="popular-categories__item-title">Pest Control</h2>
+          <p class="popular-categories__item-count">40 Items</p>
+        </div>
+
+        <div class="popular-categories__item">
+          <img
+            src="../assets/group-8-6.svg"
+            alt="Stationery & Office"
+            class="popular-categories__image"
+          />
+          <h2 class="popular-categories__item-title">Stationery & Office</h2>
+          <p class="popular-categories__item-count">62 Items</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Auto slider Animation -->
+    <section class="block container">
+      <div class="block__header">
+        <h2 class="block__heading">Popular Brands</h2>
+      </div>
+      <div class="slider" style="--width: 100px; --height: 50px; --quantity: 9">
+        <div class="list">
+          <div class="item" style="--position: 1">
+            <img
+              src="assets/auto-slider-images/popular-brands/slider1_1.png"
+              alt=""
+            />
+          </div>
+          <div class="item" style="--position: 2">
+            <img
+              src="assets/auto-slider-images/popular-brands/slider1_2.png"
+              alt=""
+            />
+          </div>
+          <div class="item" style="--position: 3">
+            <img
+              src="assets/auto-slider-images/popular-brands/slider1_3.png"
+              alt=""
+            />
+          </div>
+          <div class="item" style="--position: 4">
+            <img
+              src="assets/auto-slider-images/popular-brands/slider1_4.png"
+              alt=""
+            />
+          </div>
+          <div class="item" style="--position: 5">
+            <img
+              src="assets/auto-slider-images/popular-brands/slider1_5.png"
+              alt=""
+            />
+          </div>
+          <div class="item" style="--position: 6">
+            <img
+              src="assets/auto-slider-images/popular-brands/slider1_6.png"
+              alt=""
+            />
+          </div>
+          <div class="item" style="--position: 7">
+            <img
+              src="assets/auto-slider-images/popular-brands/slider1_7.png"
+              alt=""
+            />
+          </div>
+          <div class="item" style="--position: 8">
+            <img
+              src="assets/auto-slider-images/popular-brands/slider1_8.png"
+              alt=""
+            />
+          </div>
+          <div class="item" style="--position: 9">
+            <img
+              src="assets/auto-slider-images/popular-brands/slider1_9.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="slider"
+        reverse="true"
+        style="--width: 100px; --height: 50px; --quantity: 9"
+      >
+        <div class="list">
+          <div class="item" style="--position: 1">
+            <img
+              src="assets/auto-slider-images/popular-brands/slider1_1.png"
+              alt=""
+            />
+          </div>
+          <div class="item" style="--position: 2">
+            <img
+              src="assets/auto-slider-images/popular-brands/slider1_2.png"
+              alt=""
+            />
+          </div>
+          <div class="item" style="--position: 3">
+            <img
+              src="assets/auto-slider-images/popular-brands/slider1_3.png"
+              alt=""
+            />
+          </div>
+          <div class="item" style="--position: 4">
+            <img
+              src="assets/auto-slider-images/popular-brands/slider1_4.png"
+              alt=""
+            />
+          </div>
+          <div class="item" style="--position: 5">
+            <img
+              src="assets/auto-slider-images/popular-brands/slider1_5.png"
+              alt=""
+            />
+          </div>
+          <div class="item" style="--position: 6">
+            <img
+              src="assets/auto-slider-images/popular-brands/slider1_6.png"
+              alt=""
+            />
+          </div>
+          <div class="item" style="--position: 7">
+            <img
+              src="assets/auto-slider-images/popular-brands/slider1_7.png"
+              alt=""
+            />
+          </div>
+          <div class="item" style="--position: 8">
+            <img
+              src="assets/auto-slider-images/popular-brands/slider1_8.png"
+              alt=""
+            />
+          </div>
+          <div class="item" style="--position: 9">
+            <img
+              src="assets/auto-slider-images/popular-brands/slider1_9.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial section -->
+    <section class="block">
+      <div class="block__header">
+        <h2>Waht Our Customers Are Saying</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
+          perferendis!
+        </p>
+      </div>
+
+      <div class="container">
+        <div class="card testimonial">
+          <div class="grid grid--1x2">
+            <div class="testimonial__image">
+              <img
+                src="../assets/testimonial.png"
+                alt="A Happy, Smiling Customer"
+              />
+            </div>
+            <blockquote class="quote">
+              <p class="quote__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero
+                odit voluptatibus temporibus ducimus dolores quidem odio
+                voluptates adipisci, deserunt voluptatem.
+              </p>
+
+              <footer>
+                <div class="media">
+                  <div class="quote__image quote__line"></div>
+                  <div class="media__body">
+                    <h3 class="quote__author">John Smith</h3>
+                    <p class="quote__discription">Mosh Company CEO</p>
+                  </div>
+                </div>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Common Questions -->
+    <section class="block container block-common-questions">
+      <header class="block__header">
+        <h2 class="faq__title">Common Questions</h2>
+      </header>
+
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">
+            What is Your Policy On Refunds?
+            <span class="collapsible__chevron"
+              ><i class="fas fa-chevron-right"></i
+            ></span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Lorem ipsum dolor sit amet consectetur. Velit pellentesque
+              ultrices sollicitudin gravida elit interdum ligula.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            How Much Do Deliveries Cost?
+            <span class="collapsible__chevron"
+              ><i class="fas fa-chevron-right"></i
+            ></span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Delivery costs vary depending on your location and the size of
+              your order. Please check our delivery page for more details.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            What Are Your Delivery Hours?
+            <span class="collapsible__chevron">
+              <i class="fas fa-chevron-right"></i>
+            </span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              We offer delivery services from 9 AM to 9 PM, seven days a week.
+              Specific delivery times may vary based on your location.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            What About The Prices?
+            <span class="collapsible__chevron"
+              ><i class="fas fa-chevron-right"></i
+            ></span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Our prices are competitive and reflect the quality of our
+              products. You can find detailed pricing information on each
+              product page.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            Do You Serve My Area?
+            <span class="collapsible__chevron"
+              ><i class="fas fa-chevron-right"></i
+            ></span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              We serve many areas, but coverage may vary. Please enter your zip
+              code on our delivery page to check if we serve your area.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-section">
+        <h3>Still Have Questions?</h3>
+        <p>
+          Can't find the answer you're looking for? Please chat to our friendly
+          team.
+        </p>
+        <a href="#" class="btn">Get In Touch</a>
+      </div>
+    </section>
+
+    <!--Footer  -->
+    <footer class="footer">
+      <div class="block container block-footer">
+        <div class="footer-grid">
+          <div class="footer-section">
+            <h3>
+              Download our app
+              <span class="collapsible__chevron dropdown"
+                ><i class="fas fa-chevron-right"></i
+              ></span>
+            </h3>
+            <div class="footer-content">
+              <div class="app-buttons">
+                <a href="#"
+                  ><img
+                    src="assets/svgs/Download on app store.svg"
+                    alt="Download on the App Store"
+                /></a>
+                <a href="#"
+                  ><img
+                    src="assets/svgs/Get it on Google play store.svg"
+                    alt="Get it on Google Play"
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h3>
+              Need help
+              <span class="collapsible__chevron dropdown"
+                ><i class="fas fa-chevron-right"></i
+              ></span>
+            </h3>
+            <div class="footer-content">
+              <ul>
+                <li><a href="tel:+8801234567890">+8801234567890</a></li>
+                <li><a href="tel:+8801234567890">+8801234567890</a></li>
+                <li>
+                  <a href="mailto:contact@example.com" class="contact-email"
+                    >contact@example.com</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h3>
+              Customer
+              <span class="collapsible__chevron dropdown"
+                ><i class="fas fa-chevron-right"></i
+              ></span>
+            </h3>
+            <div class="footer-content">
+              <ul>
+                <li><a href="#">My account</a></li>
+                <li><a href="#">My orders</a></li>
+                <li><a href="#">Return orders</a></li>
+                <li><a href="#">Wishlist</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h3>
+              Information
+              <span class="collapsible__chevron dropdown"
+                ><i class="fas fa-chevron-right"></i
+              ></span>
+            </h3>
+            <div class="footer-content">
+              <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Shipping & return</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Use</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="social-icons">
+          <p>Follow us on social media:</p>
+          <a href="#"
+            ><img
+              class="social-media-icons"
+              src="assets/svgs/facebook icon.svg"
+              alt="Facebook"
+          /></a>
+          <a href="#"
+            ><img
+              class="social-media-icons"
+              src="assets/svgs/instagram icon.svg"
+              alt="Instagram"
+          /></a>
+          <a href="#"
+            ><img
+              class="social-media-icons"
+              src="assets/svgs/pinterest icon.svg"
+              alt="Pinterest"
+          /></a>
+          <a href="#"
+            ><img
+              class="social-media-icons"
+              src="assets/svgs/youtube icon.svg"
+              alt="YouTube"
+          /></a>
+          <a href="#"
+            ><img
+              src="assets/svgs/x(twitter) icon.svg"
+              alt="X(formerly Twitter)"
+          /></a>
+        </div>
+        <div class="footer-services">
+          <div class="service-item">
+            <img src="assets/svgs/truck.svg" alt="Delivery icon" />
+            <span>Delivery from 2-4 hours</span>
+          </div>
+          <div class="service-item">
+            <img src="assets/svgs/leaf.svg" alt="Quality icon" />
+            <span>Quality assurance</span>
+          </div>
+          <div class="service-item">
+            <img src="assets/svgs/time.svg" alt="24/7 icon" />
+            <span>24/7 delivery service</span>
+          </div>
+        </div>
+        <div class="payment-icons">
+          <a href="#"><img src="assets/svgs/visa icon.svg" alt="Visa" /></a>
+          <a href="#"
+            ><img src="assets/svgs/mastercard icon.svg" alt="Mastercard"
+          /></a>
+          <a href="#"><img src="assets/svgs/paypal icon.svg" alt="PayPal" /></a>
+          <a href="#"
+            ><img
+              src="assets/svgs/american express icon.svg"
+              alt="American Express"
+          /></a>
+          <a href="#"
+            ><img src="assets/svgs/google pay icon.svg" alt="Google Pay"
+          /></a>
+        </div>
+        <div class="footer-bottom">
+          <p>Copyright © 2024 GEBYA Online. All Rights Reserved</p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
