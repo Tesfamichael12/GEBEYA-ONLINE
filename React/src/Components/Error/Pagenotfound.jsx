@@ -1,10 +1,10 @@
 import React from "react";
 import { Typography, Button } from "@material-tailwind/react";
 import { FlagIcon } from "@heroicons/react/24/solid";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export function Pagenotfound() {
-  const useNavigate = useNavigate();
+  const Navigate = useNavigate();
   return (
     <div className="h-screen mx-auto grid place-items-center text-center px-8">
       <div>

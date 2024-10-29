@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { supabase } from "../Services/Supabase";
+import { supabase } from "../../Services/Supabase";
 import {
   Card,
   Input,

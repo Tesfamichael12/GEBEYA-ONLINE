@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { supabase } from "../Services/Supabase";
-import { useAuth } from "../Services/AuthContext";
+import { supabase } from "../../Services/Supabase";
+import { useAuth } from "../../Services/AuthContext";
 
 const UpdateUserMetadata = () => {
   const { session } = useAuth();
