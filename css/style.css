@@ -30,7 +30,6 @@ body {
   font-size: 2.4rem;
   line-height: 1.5; /* 1.5 * font-size(2.4rem) */
   color: var(--color-body);
-  background-color: #e5e5e5;
 }
 
 h1,
@@ -139,7 +138,6 @@ p {
   right: 0;
   z-index: 100;
   transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
-  backdrop-filter: blur(0); /* No blur initially */
 }
 
 .navbar-container.scrolled {
@@ -153,6 +151,7 @@ p {
 /* Add a class when scrolling */
 .navbar.scrolled {
   background-color: transparent;
+  border: unset;
 }
 
 .logo img {
@@ -398,7 +397,8 @@ p {
 }
 
 .hero__title {
-  font-size: 5rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 6rem;
   margin-bottom: 5rem;
   line-height: 1.2;
   font-weight: bold;
